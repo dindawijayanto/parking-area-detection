@@ -1,0 +1,17 @@
+# Dataset images are shared via a public link, not committed
+data/raw/*
+data/processed/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Models and environments
+*.pt
+*.pth
+*.pkl
+*.joblib
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Course file
+*.xlsx
