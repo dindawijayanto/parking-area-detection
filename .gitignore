@@ -7,7 +7,6 @@ data/processed/*
 # Models and environments
 *.pt
 *.pth
-*.pkl
 *.joblib
 .venv/
 __pycache__/
