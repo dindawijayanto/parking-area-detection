@@ -1,0 +1,149 @@
+{
+  "xgb_optuna": {
+    "n_trials": 35,
+    "best_val_bal_miou": 0.8538635710612223,
+    "best_params": {
+      "max_depth": 9,
+      "learning_rate": 0.04586832880609634,
+      "min_child_weight": 6.848731545097833,
+      "subsample": 0.8916970176965687,
+      "colsample_bytree": 0.606963644447494,
+      "reg_alpha": 2.5874349713673443,
+      "reg_lambda": 2.8915503734075263,
+      "gamma": 0.3791986690982281,
+      "max_bin": 128,
+      "scale_pos_weight": 0.9641297372598436
+    },
+    "best_iteration": 812,
+    "test_results": {
+      "train_sec": 53.928290128707886,
+      "infer_ms": 1897.5735994485708,
+      "size_mb": 6.0998640060424805,
+      "config": {
+        "blur_sigma": 2.5,
+        "thr": 0.42,
+        "open_k": 15,
+        "close_k": 11,
+        "orig_mIoU": 0.8745025331556407,
+        "dusk_mIoU": 0.8601864970649353,
+        "val_bev_mae": 1.8888888888888888,
+        "joint_score": 0.8597889595547326
+      },
+      "overall": {
+        "IoU_Floor": 0.7728533429106358,
+        "IoU_Motor": 0.8362661919056249,
+        "mIoU": 0.8045597674081304,
+        "Macro_F1": 0.891354196937205,
+        "Pixel_Acc": 0.8948466025590623
+      },
+      "bev_mae": 4.461538314819336,
+      "bev_rmse": 5.967862606048584,
+      "per_video": {
+        "03-04-11-2026-afternoon-top-dinda": {
+          "IoU_Floor": 0.8033876089597408,
+          "IoU_Motor": 0.8501827497622375,
+          "mIoU": 0.8267851793609892,
+          "Macro_F1": 0.9050008894714237,
+          "Pixel_Acc": 0.9070713862546188,
+          "gt_free_mean": 38.333333333333336,
+          "pred_free_mean": 36.77777777777778,
+          "bev_mae": 2.0,
+          "bev_rmse": 2.211083173751831
+        },
+        "04-04-11-2026-evening-top-keiza": {
+          "IoU_Floor": 0.7074060775933626,
+          "IoU_Motor": 0.6894154173500308,
+          "mIoU": 0.6984107474716967,
+          "Macro_F1": 0.8223955208694373,
+          "Pixel_Acc": 0.8226145458937243,
+          "gt_free_mean": 23.77777777777778,
+          "pred_free_mean": 14.222222222222221,
+          "bev_mae": 9.55555534362793,
+          "bev_rmse": 9.76387882232666
+        },
+        "09-12-11-2026-morning-top-keiza": {
+          "IoU_Floor": 0.8115008739869697,
+          "IoU_Motor": 0.9090125496294748,
+          "mIoU": 0.8602567118082223,
+          "Macro_F1": 0.9241405361618886,
+          "Pixel_Acc": 0.9346216830483335,
+          "gt_free_mean": 17.5,
+          "pred_free_mean": 16.0,
+          "bev_mae": 1.5,
+          "bev_rmse": 1.7320507764816284
+        }
+      }
+    }
+  },
+  "rf_optuna": {
+    "n_trials": 18,
+    "best_val_bal_miou": 0.8419960692982691,
+    "best_params": {
+      "max_depth": 27,
+      "min_samples_leaf": 4,
+      "min_samples_split": 17,
+      "max_features": 0.5403232470731794,
+      "max_samples": 0.8094925618748401,
+      "criterion": "entropy"
+    },
+    "test_results": {
+      "train_sec": 513.0536844730377,
+      "infer_ms": 3093.272255017207,
+      "size_mb": 243.49102306365967,
+      "config": {
+        "blur_sigma": 2.5,
+        "thr": 0.42,
+        "open_k": 19,
+        "close_k": 11,
+        "orig_mIoU": 0.8683292642853621,
+        "dusk_mIoU": 0.8410849261358779,
+        "val_bev_mae": 1.8888888888888888,
+        "joint_score": 0.8471515396550644
+      },
+      "overall": {
+        "IoU_Floor": 0.7841603435184189,
+        "IoU_Motor": 0.8371746634352473,
+        "mIoU": 0.8106675034768331,
+        "Macro_F1": 0.895198199282749,
+        "Pixel_Acc": 0.8976942245950512
+      },
+      "bev_mae": 2.769230842590332,
+      "bev_rmse": 3.6268231868743896,
+      "per_video": {
+        "03-04-11-2026-afternoon-top-dinda": {
+          "IoU_Floor": 0.813285434424692,
+          "IoU_Motor": 0.851297281989093,
+          "mIoU": 0.8322913582068925,
+          "Macro_F1": 0.9083530833587468,
+          "Pixel_Acc": 0.9097521404166187,
+          "gt_free_mean": 38.333333333333336,
+          "pred_free_mean": 38.22222222222222,
+          "bev_mae": 1.2222222089767456,
+          "bev_rmse": 1.452966332435608
+        },
+        "04-04-11-2026-evening-top-keiza": {
+          "IoU_Floor": 0.7318787741117232,
+          "IoU_Motor": 0.697257456114852,
+          "mIoU": 0.7145681151132877,
+          "Macro_F1": 0.833406575966201,
+          "Pixel_Acc": 0.8342392958022075,
+          "gt_free_mean": 23.77777777777778,
+          "pred_free_mean": 18.11111111111111,
+          "bev_mae": 5.666666507720947,
+          "bev_rmse": 5.8404717445373535
+        },
+        "09-12-11-2026-morning-top-keiza": {
+          "IoU_Floor": 0.8075928712199877,
+          "IoU_Motor": 0.9032520549657009,
+          "mIoU": 0.8554224630928443,
+          "Macro_F1": 0.9213615968494402,
+          "Pixel_Acc": 0.9311932104323671,
+          "gt_free_mean": 17.5,
+          "pred_free_mean": 16.25,
+          "bev_mae": 1.25,
+          "bev_rmse": 1.4142135381698608
+        }
+      }
+    }
+  }
+}
