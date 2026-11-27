@@ -14,3 +14,7 @@ __pycache__/
 
 # Course file
 *.xlsx
+
+# Regenerable PCD outputs (python src/pcd/search_best.py / make_figures.py), too big for git
+results/pcd_eval/cache/
+results/pcd_eval/figures/

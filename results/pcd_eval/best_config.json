@@ -1,0 +1,30 @@
+{
+  "variant": "gw + hm + median + close",
+  "pcd": {
+    "gray_world": true,
+    "hist_match": true,
+    "median": true,
+    "v_close": true,
+    "p": 6,
+    "median_k": 5,
+    "close_k": 5
+  },
+  "seg": {
+    "channel": "V-S",
+    "w_s": 1.0,
+    "method": "otsu",
+    "adaptive": null,
+    "edge": [
+      15.0,
+      0.1
+    ],
+    "morph_k": 15,
+    "min_area": 2000
+  },
+  "t": null,
+  "sel_mIoU": 0.744190923717696,
+  "sel_MAE": 4.121212121212121,
+  "val_mIoU": 0.714189464447538,
+  "test_mIoU": 0.7434626316272288,
+  "test_MAE": 3.730769230769231
+}
