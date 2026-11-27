@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101512">
+  <title>Demo Parkir Motor</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <span class="brand-icon" aria-hidden="true">P</span>
+      <span class="brand">Parkir Motor</span>
+      <span class="header-label" id="frame-count"></span>
+    </div>
+  </header>
+
+  <main>
+    <h1>Deteksi parkir motor</h1>
+    <p class="intro">Lihat area terisi, ruang yang masih muat motor, dan hasil deteksi YOLO pada rekaman uji.</p>
+
+    <div class="workspace" id="workspace" hidden>
+      <section class="viewer" aria-label="Tampilan hasil">
+        <div class="viewer-toolbar">
+          <div class="view-controls" role="group" aria-label="Lapisan gambar">
+            <button type="button" data-view="parking" aria-pressed="true">Peta parkir</button>
+            <button type="button" data-view="motors" aria-pressed="false">Motor YOLO</button>
+            <button type="button" data-view="original" aria-pressed="false">Foto asli</button>
+          </div>
+          <span class="timecode" id="frame-time"></span>
+        </div>
+        <figure>
+          <div class="frame-stage" id="frame-stage">
+            <div class="frame-message" id="frame-message" hidden>
+              <span class="spinner" id="spinner" aria-hidden="true"></span>
+              <span id="frame-status" role="status"></span>
+              <button type="button" id="retry" hidden>Coba lagi</button>
+            </div>
+          </div>
+          <figcaption>
+            <div id="parking-legend" class="legend">
+              <span><i class="boundary"></i> Batas zona parkir</span>
+              <span><i class="free"></i> Ruang kosong yang muat motor</span>
+              <span><i class="occupied"></i> Area terisi motor</span>
+              <span><i class="outside"></i> Di luar area analisis</span>
+            </div>
+            <div id="motor-legend" class="legend" hidden>
+              <span><i class="motor"></i> Masker motor dari YOLO</span>
+              <span id="motor-status"></span>
+            </div>
+            <div id="original-legend" class="legend" hidden>Foto crop dari rekaman uji</div>
+          </figcaption>
+        </figure>
+      </section>
+
+      <aside class="sidebar" aria-label="Pengaturan dan ringkasan prediksi">
+        <section class="controls">
+          <h2>Pengaturan</h2>
+          <label for="recording">Rekaman</label>
+          <select id="recording"></select>
+          <label for="frame">Frame</label>
+          <div class="frame-controls">
+            <button type="button" id="previous" aria-label="Frame sebelumnya"><span aria-hidden="true">‹</span></button>
+            <select id="frame"></select>
+            <button type="button" id="next" aria-label="Frame berikutnya"><span aria-hidden="true">›</span></button>
+          </div>
+          <label for="model">Model peta parkir</label>
+          <select id="model"></select>
+        </section>
+
+        <section class="results" aria-label="Ringkasan peta parkir" aria-live="polite">
+          <h2>Prediksi parkir</h2>
+          <div class="metric">
+            <div class="count"><strong id="free-spaces">–</strong><span>motor</span></div>
+            <div class="metric-label">Estimasi kapasitas kosong</div>
+          </div>
+          <div class="occupancy">
+            <span>Piksel terisi di area analisis</span>
+            <strong id="occupied-percent">–</strong>
+          </div>
+          <p class="method">Estimasi mencakup bagian barisan tengah yang ditandai garis biru. Batasnya dikalibrasi dari marka putih pada foto referensi.</p>
+        </section>
+      </aside>
+    </div>
+    <p id="catalog-status" class="catalog-status" role="status">Memuat frame uji…</p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,8 @@
+Model,Variant,mIoU,IoU_Floor,IoU_Motor,Macro_F1,Pixel_Acc,Afternoon_mIoU,Dusk_mIoU,Morning_mIoU,BEV_MAE,BEV_RMSE,Dusk_BEV_MAE,Train_s,Infer_ms
+Dinda_Pure_PCD,Baseline Dinda PCD (No ML),0.7458,0.636,0.8557,0.8499,0.8847,0.7446,0.8008,0.7116,3.46,4.03,3.89,0.0,21.1
+V1_Dinda_Full_RF,V1: Data Dinda Sepenuhnya,0.782,0.7016,0.8625,0.8754,0.8961,0.807,0.6779,0.8207,3.65,4.49,4.11,156.4,1220.2
+V1_Dinda_Full_XGB,V1: Data Dinda Sepenuhnya,0.7906,0.713,0.8683,0.881,0.9007,0.8154,0.7027,0.8179,4.35,5.19,5.78,16.4,351.2
+V2_Ours111_DindaPreproc_RF,V2: Data Kita + Preproc Dinda,0.6783,0.5595,0.7972,0.8023,0.8387,0.7194,0.4957,0.76,3.42,4.12,4.0,223.1,1476.5
+V2_Ours111_DindaPreproc_XGB,V2: Data Kita + Preproc Dinda,0.6904,0.5689,0.8119,0.8107,0.8493,0.7266,0.5191,0.7664,4.35,4.77,4.56,30.5,538.0
+V3_Ours_Pure_v2_RF,V3: Murni Kita -> Test Dinda,0.7303,0.6461,0.8145,0.8414,0.8614,0.688,0.681,0.8069,7.58,11.24,2.89,152.2,1354.5
+V3_Ours_Pure_v2_XGB,V3: Murni Kita -> Test Dinda,0.7562,0.6688,0.8435,0.8583,0.8811,0.7485,0.6781,0.8096,5.15,6.85,2.67,38.6,580.7
