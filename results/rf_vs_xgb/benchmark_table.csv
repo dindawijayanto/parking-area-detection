@@ -1,0 +1,6 @@
+Model,mIoU,IoU_Floor,IoU_Motor,Macro_F1,Pixel_Acc,Train_s,Infer_ms,Size_MB
+Naive Bayes (Baseline Repo Dinda),0.647,0.537,0.757,,0.811,,,
+RandomForest (raw),0.7534,0.7173,0.7895,0.8589,0.8628,103.98,1467.9,249.57
+RandomForest (+morph),0.7879,0.7599,0.8159,0.8811,0.8837,103.98,1467.9,249.57
+XGBoost (raw),0.7529,0.7107,0.7951,0.8584,0.8637,10.09,365.8,1.45
+XGBoost (+morph),0.7862,0.7568,0.8156,0.88,0.8828,10.09,365.8,1.45
